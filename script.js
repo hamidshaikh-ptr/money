@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
   gigya.accounts.addEventHandlers({ onLogin: onAfterSubmitHandler});
   
   
@@ -7,4 +7,3 @@ $(document).ready(function() {
 console.log(responseObj.response.requestParams+ "\r\n");
  
 }
-  });
