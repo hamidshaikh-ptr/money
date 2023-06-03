@@ -70,7 +70,7 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 const displayMovements = function (movements) {
-  containerMovements.innerHTML = '';
+  //containerMovements.innerHTML = '';
 
   movements.forEach((move, i) => {
     const type = move > 0 ? 'deposit' : 'withdrawal';
@@ -84,7 +84,7 @@ const displayMovements = function (movements) {
   });
 };
 
-displayMovements(account1.movements);
+//displayMovements(account1.movements);
 
 const addDisplayMoney = function (movements) {
   const displayMoney = movements.reduce(function (acc, move) {
@@ -127,15 +127,14 @@ function login() {
 //   console.log('Inside submit button')
 //   mainApp.style.display = "visible";
 // })
-const closeLogin = () => {
-  alert('Hello');
-  mainApp.style.display = "grid";
+
+
+
+ function onAfterSubmitHandler(responseObj){
+   alert('You are now logged in');
+console.log(responseObj.response.requestParams+ "\r\n");
+ 
 }
-
-gigya.accounts.addEventHandlers({
-            onLogin: closeLogin()
-});
-
 
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
