@@ -25,8 +25,8 @@
 </head>
 <body>
 <div id="runningCodeExample" style="border: 1px solid skyblue; padding: 15px; width: 300px;">
-<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'gigya-login-screen','onAfterSubmit': 'onAfterSubmitHandler'});">Login</a>  |  
-<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Registration','onAfterSubmit': 'onAfterSubmitHandler'});">Register</a>
+<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'gigya-login-screen','onBeforeSubmit': 'onAfterSubmitHandler'});">Login</a>  |  
+<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Registration','onBeforeSubmit': 'onAfterSubmitHandler'});">Register</a>
 </br></br></br>
 </br></br></br>
 <a href="#" onclick="gigya.accounts.logout({callback:onLogout});">Logout</a>
