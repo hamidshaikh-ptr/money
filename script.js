@@ -1,9 +1,9 @@
 
-  gigya.accounts.addEventHandlers({ onLogin: onAfterSubmitHandler});
+  gigya.accounts.addEventHandlers({ onLogin: onAfterSubmitHandler()});
   
   
  function onAfterSubmitHandler(responseObj){
    alert('You are now logged in');
-console.log(responseObj.response.requestParams+ "\r\n");
+//console.log(responseObj.response.requestParams+ "\r\n");
  
 }
