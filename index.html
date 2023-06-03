@@ -26,9 +26,8 @@
 <body>
 <div id="runningCodeExample" style="border: 1px solid skyblue; padding: 15px; width: 300px;">
 <a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'gigya-login-screen'});">Login</a>  |  
-<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Registration'});">Register</a>
+<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Registration','onAfterSubmit': 'onAfterSubmitHandler'});">Register</a>
 </br></br></br>
-<a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-ProfileUpdate'});">Edit Your Profile</a>
 </br></br></br>
 <a href="#" onclick="gigya.accounts.logout({callback:onLogout});">Logout</a>
 <script>
@@ -41,22 +40,15 @@ alert('Error :' + response.errorMessage);
 }
 }
   
-gigya.accounts.addEventHandlers({
-            onLogin: closeLogin()
-});
-  
-function closeLogin(){
-  alert('closeLogin');
+
+ function onAfterSubmitHandler(responseObj){
+   alert('You are now logged in');
+console.log(responseObj.response.requestParams+ "\r\n");
+ 
 }
   
- function onLogin(response) {
-if ( response.errorCode == 0 ) {
-alert('You are now logged in');
-}
-else {
-alert('Error :' + response.errorMessage);
-}
-}
+  
+  
 </script></div>
 </body></html>
 
