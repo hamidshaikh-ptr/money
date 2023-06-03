@@ -40,13 +40,16 @@ alert('Error :' + response.errorMessage);
 }
 }
   
+  
+ function onAfterSubmitHandler(responseObj){
+   alert('You are now logged in');
+console.log(responseObj.response.requestParams+ "\r\n");
+ 
+}
+  
 
   
   
   
 </script></div>
 </body></html>
-
-    <script src="script.js"></script>
-  </body>
-</html>
