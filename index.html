@@ -26,7 +26,7 @@
 <body>
 <div id="runningCodeExample" style="border: 1px solid skyblue; padding: 15px; width: 300px;">
 <a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'gigya-login-screen'});">Login</a>  |  
-<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Registration'});">Register</a>
+<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Registration'});igya.accounts.login({callback:onLogin});">Register</a>
 </br></br></br>
 <a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-ProfileUpdate'});">Edit Your Profile</a>
 </br></br></br>
@@ -35,6 +35,15 @@
 function onLogout(response) {
 if ( response.errorCode == 0 ) {
 alert('You are now logged out');
+}
+else {
+alert('Error :' + response.errorMessage);
+}
+}
+  
+ function onLogin(response) {
+if ( response.errorCode == 0 ) {
+alert('You are now logged in');
 }
 else {
 alert('Error :' + response.errorMessage);
