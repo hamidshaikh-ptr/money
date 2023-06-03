@@ -26,7 +26,7 @@
 <body>
 <div id="runningCodeExample" style="border: 1px solid skyblue; padding: 15px; width: 300px;">
 <a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'gigya-login-screen'});">Login</a>  |  
-<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Registration'});gigya.accounts.login({callback:onLogin});">Register</a>
+<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Registration'});">Register</a>
 </br></br></br>
 <a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-ProfileUpdate'});">Edit Your Profile</a>
 </br></br></br>
@@ -39,6 +39,14 @@ alert('You are now logged out');
 else {
 alert('Error :' + response.errorMessage);
 }
+}
+  
+gigya.accounts.addEventHandlers({
+            onLogin: closeLogin()
+});
+  
+function closeLogin(){
+  alert('closeLogin');
 }
   
  function onLogin(response) {
