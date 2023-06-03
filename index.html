@@ -21,7 +21,6 @@
     <html>
 <head>
 <title></title>
-<SCRIPT type="text/javascript" lang="javascript" src="https://cdns.gigya.com/js/gigya.js?apikey=3_mK2cmEzLkzhqe4MUrtPncxbv4wKsYAhsew0iVwhVUls3c_Jx_HLX434jAVpq5M_W"></SCRIPT>
 </head>
 <body>
 <div id="runningCodeExample" style="border: 1px solid skyblue; padding: 15px; width: 300px;">
@@ -39,6 +38,8 @@ else {
 alert('Error :' + response.errorMessage);
 }
 }
+  
+  gigya.accounts.addEventHandlers({ onLogin: onAfterSubmitHandler});
   
   
  function onAfterSubmitHandler(responseObj){
