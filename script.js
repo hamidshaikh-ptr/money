@@ -1,5 +1,5 @@
 
-  gigya.accounts.addEventHandlers({ onLogin: onAfterSubmitHandler()});
+  //gigya.accounts.addEventHandlers({ onLogin: onAfterSubmitHandler()});
   
   
  function onAfterSubmitHandler(responseObj){
