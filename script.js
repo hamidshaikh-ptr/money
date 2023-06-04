@@ -14,12 +14,9 @@ function onAfterSubmitHandler(responseObj){
 
 login.addEventListener('click', () => {
 
-  var customLangParams = {
-    'this_field_is_required' : 'Please enter %fieldname'
-  };
+
   var params = {
     'screenSet': 'Default-RegistrationLogin',
-    'customLang': customLangParams,
   'startScreen':'gigya-login-screen'
   };
   gigya.accounts.showScreenSet(params);
@@ -28,7 +25,7 @@ login.addEventListener('click', () => {
 register.addEventListener('click', () => {
 
   var customLangParams = {
-    'this_field_is_required' : 'Please enter %fieldname'
+    'this_field_is_required' : '%fieldname'
   };
   var params = {
     'screenSet': 'Default-RegistrationLogin',
