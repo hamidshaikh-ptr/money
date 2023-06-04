@@ -43,13 +43,11 @@ gigya.accounts.addEventHandlers({
   onLogin: function(event) {
     // Handle the login event
     console.log("User logged in");
-    console.log("User ID:", event.user.UID);
-    console.log("Email:", event.user.email);
 
     logout.classList.remove('hidden');
     register.classList.add('hidden');
     login.classList.add('hidden');
-    welcome.textContent = "Hello, " + event.user.email + "!";
+    welcome.textContent = "Hello, You are logged in!";
   },
   onLogout: function(event) {
     // Handle the logout event
@@ -57,16 +55,6 @@ gigya.accounts.addEventHandlers({
     logout.classList.add('hidden');
     register.classList.remove('hidden');
     login.classList.remove('hidden');
-  },
-  onRegister: function(event) {
-    // Handle the registration event
-    console.log("User registered");
-    console.log("User ID:", event.user.UID);
-    console.log("Email:", event.user.email);
-
-    logout.classList.remove('hidden');
-    register.classList.add('hidden');
-    login.classList.add('hidden');
   }
   // Add more event handlers as needed
 });
