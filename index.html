@@ -16,63 +16,21 @@
     <title>Bankist</title>
   </head>
   <body>
-    <!-- TOP NAVIGATION -->
-    
-    <html>
-<head>
-<title></title>
-</head>
-<body>
-<div id="runningCodeExample" style="border: 1px solid skyblue; padding: 15px; width: 300px;">
-<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'gigya-login-screen','onBeforeSubmit': 'onAfterSubmitHandler'});">Login</a>  |  
-<a href="#" onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Registration','onBeforeSubmit': 'onAfterSubmitHandler'});">Register</a>
-</br></br></br>
-</br></br></br>
-<a href="#" onclick="gigya.accounts.logout({callback:onLogout});">Logout</a>
-<script>
-  
-  gigya.accounts.addEventHandlers({
-  onLogin: function(event) {
-    // Handle the login event
-    console.log("User logged in");
-    console.log("User ID:", event.user.UID);
-    console.log("Email:", event.user.email);
-  },
-  onLogout: function(event) {
-    // Handle the logout event
-    console.log("User logged out");
-  },
-  onRegister: function(event) {
-    // Handle the registration event
-    console.log("User registered");
-    console.log("User ID:", event.user.UID);
-    console.log("Email:", event.user.email);
-  }
-  // Add more event handlers as needed
-});
+    <nav>
+      <p class="welcome">Log in to get started</p>
+      <form class="login">
+        <a href="#" id="login">Login</a>  |  
+        <a href="#" id="register"
+          onclick="gigya.accounts.showScreenSet({'screenSet':'Default-RegistrationLogin', 'startScreen':'MySite-Registration','onBeforeSubmit': 'onAfterSubmitHandler'});">Register</a>
+          <a href="#" id="logout" class="hidden" onclick="gigya.accounts.logout({callback:onLogout});">Logout</a>
+        </form>
+    </nav>
 
-
-
-
-
-
-
-  
-function onLogout(response) {
-if ( response.errorCode == 0 ) {
-alert('You are now logged out');
-}
-else {
-alert('Error :' + response.errorMessage);
-}
-}
-  
-
-  
-
-  
-  
-  
-</script></div>
- <script src="script.js"></script>
-</body></html>
+    <div class="container" id="login-card">
+      <div class="card">
+        <h1>Welcome</h1>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

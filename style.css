@@ -340,3 +340,8 @@ h2 {
   background-color: #3e8e41;
 }
 /*login card css ends*/
+
+
+.hidden {
+  display: none;
+}
