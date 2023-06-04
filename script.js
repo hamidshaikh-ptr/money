@@ -58,4 +58,13 @@ gigya.accounts.addEventHandlers({
   }
   // Add more event handlers as needed
 });
+
+function onLogout(response) {
+if ( response.errorCode == 0 ) {
+alert('You are now logged out');
+}
+else {
+alert('Error :' + response.errorMessage);
+}
+}
   
