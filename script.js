@@ -55,7 +55,7 @@ gigya.accounts.addEventHandlers({
     logout.classList.add('hidden');
     register.classList.remove('hidden');
     login.classList.remove('hidden');
-     logouttext.textContent = "Click <b>Login | Register</b> to begin";
+     logouttext.textContent = "Click Login or Register to begin";
   }
   // Add more event handlers as needed
 });
