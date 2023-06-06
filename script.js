@@ -5,6 +5,7 @@ const login = document.getElementById('login');
 const logout = document.getElementById('logout');
 const register = document.getElementById('register');
 const welcome = document.querySelector('.welcome');
+const logouttext = document.querySelector('.logouttext');
 
 function onAfterSubmitHandler(responseObj){
    alert('You are now logged in');
@@ -45,6 +46,8 @@ gigya.accounts.addEventHandlers({
     register.classList.add('hidden');
     login.classList.add('hidden');
     welcome.textContent = "Hello, You are logged in!";
+     logouttext.textContent = "You are logged in!";
+    
   },
   onLogout: function(event) {
     // Handle the logout event
@@ -52,6 +55,7 @@ gigya.accounts.addEventHandlers({
     logout.classList.add('hidden');
     register.classList.remove('hidden');
     login.classList.remove('hidden');
+     logouttext.textContent = "Click <b>Login | Register</b> to begin";
   }
   // Add more event handlers as needed
 });
